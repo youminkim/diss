@@ -22,57 +22,51 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export function AddDissTrack({
-  action,
+    action,
 }: {
-  action: (formData: FormData) => void;
+    action: (formData: FormData) => void;
 }) {
-  return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-100 px-4 py-12 dark:bg-gray-900">
-      <div className="w-full max-w-md space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-          Add Diss Track
-        </h1>
-        <form className="space-y-4" action={action}>
-          <div>
-            <Label htmlFor="diss">Diss </Label>
-            <div className="relative">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 dark:text-gray-400">
-                youtube.com/watch?v=
-              </span>
-              <Input
-                className="mt-1 block w-full pl-[200px]"
-                id="diss"
-                name="diss"
-                placeholder="Enter video ID"
-                type="text"
-              />
-            </div>
-          </div>
-          <div>
-            <Label
-              htmlFor="response
+    return (
+        <main className="flex min-h-screen items-center justify-center bg-gray-100 px-4 py-12 dark:bg-gray-900">
+            <div className="w-full max-w-md space-y-4">
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+                    Add Diss Track
+                </h1>
+                <form className="space-y-4" action={action}>
+                    <div>
+                        <Label htmlFor="diss">Diss</Label>
+                        <div className="relative">
+                            <Input
+                                className="mt-1 block w-full"
+                                id="diss"
+                                name="diss"
+                                placeholder="Enter Youtube video link"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <Label
+                            htmlFor="response
             "
-            >
-              Response
-            </Label>
-            <div className="relative">
-              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 dark:text-gray-400">
-                youtube.com/watch?v=
-              </span>
-              <Input
-                className="mt-1 block w-full pl-[200px]"
-                id="response"
-                name="response"
-                placeholder="Enter video ID"
-                type="text"
-              />
+                        >
+                            Response
+                        </Label>
+                        <div className="relative">
+                            <Input
+                                className="mt-1 block w-full"
+                                id="response"
+                                name="response"
+                                placeholder="Enter Youtube link"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <Button className="w-full" type="submit">
+                        Save
+                    </Button>
+                </form>
             </div>
-          </div>
-          <Button className="w-full" type="submit">
-            Save
-          </Button>
-        </form>
-      </div>
-    </main>
-  );
+        </main>
+    );
 }
