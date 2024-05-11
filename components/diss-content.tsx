@@ -56,7 +56,7 @@ export function DissContent({
                     {tracks.map((track) => {
                         if (!track.respId) return;
                         return (
-                            <div>
+                            <div key={track.id}>
                                 <Video id={track.respId} />
                                 <Link href={`/diss/${track.respId}`}>
                                     See tracks

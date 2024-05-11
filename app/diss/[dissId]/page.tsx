@@ -16,7 +16,7 @@ export default async function DissPage({
     });
 
     // find all tracks that are responses to the diss track
-    const respIds = tracks1.map((track) => track.respId || "");
+    const respIds = tracks1.map((track) => track.respId);
     const tracks2 = await prisma.track.findMany({
         where: {
             dissId: {
