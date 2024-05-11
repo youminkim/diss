@@ -28,7 +28,7 @@ export default function AddDissPage() {
             },
         });
 
-        redirect(`/track/${dissId}`);
+        redirect(`/diss/${dissId}`);
     }
 
     return <AddDissTrack action={createDiss} />;
